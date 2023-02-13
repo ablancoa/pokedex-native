@@ -6,15 +6,13 @@ export default function Stats({stats, color}) {
 
   const statBar = (stat, index) => {
     return(
-      <>
-        <View style={styles.content} key={index}>
-          <Text style={styles.name}>{capitalize(stat.stat.name)}</Text>
-          <Text style={styles.baseStat}>{stat.base_stat}</Text>
-          <View style={styles.barContent}>
-            <View style={{...styles.barStat, width: `${stat.base_stat}%`, backgroundColor: color}}></View>
-          </View>
+      <View style={styles.content} key={index}>
+        <Text style={styles.name}>{capitalize(stat.stat.name)}</Text>
+        <Text style={styles.baseStat}>{stat.base_stat}</Text>
+        <View style={styles.barContent}>
+          <View style={{...styles.barStat, width: `${stat.base_stat}%`, backgroundColor: color}}></View>
         </View>
-      </>
+      </View>
     )
   }
 

@@ -17,7 +17,7 @@ export default function PokemonCard({pokemon}) {
     <View style={{width:"50%", padding:5}}>
         <TouchableOpacity style={bgStyle} onPress={() => goToPokemon()}>
         <View style={styles.bgStyele}>
-          <Text style={styles.number}>#{`${pokemon.order}`.padStart(3,0)}</Text>
+          <Text style={styles.number}>#{`${pokemon.id}`.padStart(3,0)}</Text>
           <Text style={styles.name}>{capitalize(pokemon.name)}</Text>
         </View>
         <Image source={{uri: pokemon.image}} style={styles.image}/>
